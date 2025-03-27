@@ -1,0 +1,27 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+        <!--    Oruga   -->
+        
+        <!--Cuerpo-->
+        <circle cx="200" cy="250" r="100" fill="#00ff00" stroke="white" stroke-width="10"></circle>
+        <circle cx="300" cy="250" r="100" fill="#00ff00" stroke="white" stroke-width="10"></circle>
+        <circle cx="400" cy="250" r="100" fill="#00ff00" stroke="white" stroke-width="10"></circle>
+        <circle cx="500" cy="250" r="100" fill="#00ff00" stroke="white" stroke-width="10"></circle>
+
+        <!--Cabeza-->
+        <circle cx="600" cy="200" r="125" fill="#00ffaa" stroke="white" stroke-width="10"></circle>
+
+        <!--Orejas-->
+        <circle cx="500" cy="100" r="30" fill="#00ff00" stroke="white" stroke-width="10"></circle>
+        <circle cx="700" cy="100" r="30" fill="#00ff00" stroke="white" stroke-width="10"></circle>
+
+        <!--Ojos-->
+        <circle cx="580" cy="150" r="35" fill="white" stroke="black" stroke-width="10"></circle>
+        <circle cx="660" cy="150" r="35" fill="white" stroke="black" stroke-width="10"></circle>
+
+        <!--Pupilas-->
+        <circle cx="600" cy="140" r="20" fill="black"></circle>
+        <circle cx="680" cy="140" r="20" fill="black"></circle>
+
+        <!--Boca-->
+        <circle cx="620" cy="250" r="15" fill="black" stroke="black" stroke-width="10"></circle>
+</svg>
