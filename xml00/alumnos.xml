@@ -1,0 +1,15 @@
+<!DOCTYPE alumnos SYSTEM "alumnos.dtd">
+<alumnos>
+    <alumno>
+        <nombre>Eren</nombre>
+        <nacimiento>0835-03-30</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Mikasa</nombre>
+        <nacimiento>0834-02-10</nacimiento>
+    </alumno>
+    <alumno>
+        <nombre>Armin</nombre>
+        <nacimiento>0833-10-03</nacimiento>
+    </alumno>
+</alumnos>

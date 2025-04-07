@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE alumno SYSTEM "alumno.dtd">
+<alumno correo="algo@x.y">
+    <nombre>Eren</nombre>
+    <nacimiento>0835-03-30</nacimiento>
+</alumno>
