@@ -1,17 +1,132 @@
 <!DOCTYPE html>
-<html>
-    <style>
-        table,th,td {
-            border : 1px solid black;
-            border-collapse: collapse;
-        }
-        th,td {
-            padding: 5px;
-        }
-    </style>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Página 01</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #ffffff;
+                color: #111;
+                margin: 0;
+                padding: 2rem;
+            }
+          
+            h1 {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #000;
+                margin-bottom: 2rem;
+                border-bottom: 2px solid #000;
+                padding-bottom: 0.5rem;
+            }
+          
+            button {
+                background-color: #000;
+                color: #fff;
+                border: 2px solid #000;
+                padding: 0.6rem 1.2rem;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+                display: block;
+                margin: 0 auto 2rem auto;
+            }
+          
+            button:hover {
+                background-color: #fff;
+                color: #000;
+                transform: scale(1.05);
+            }
+          
+            table {
+                width: 100%;
+                max-width: 900px;
+                margin: auto;
+                border-collapse: collapse;
+                table-layout: fixed;
+                box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            }
+          
+            th, td {
+                width: 1%;
+                padding: 0.8rem;
+                border: 1px solid #000;
+                text-align: left;
+                transition: background-color 0.2s ease;
+                word-wrap: break-word;
+            }
+          
+            th {
+                text-align: center;
+                background-color: #000;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+          
+            tr:hover td {
+                background-color: #d5d5d5;
+            }
+
+            .explosion {
+                position: fixed;
+                pointer-events: none;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 9999;
+                overflow: hidden;
+            }
+
+            .circle, .line {
+                position: absolute;
+                opacity: 0.8;
+                animation: explode 3s forwards;
+            }
+
+            .circle {
+                border-radius: 50%;
+                background: #000;
+            }
+
+            .line {
+                width: 2px;
+                height: 30px;
+                background: #111;
+                transform-origin: center;
+            }
+
+            @keyframes explode {
+                100% {
+                    transform: translate(var(--x), var(--y)) scale(var(--scale));
+                    opacity: 0;
+                }
+            }
+          
+            @media (max-width: 768px) {
+                table, th, td {
+                    font-size: 0.9rem;
+                }
+            
+                h1 {
+                    font-size: 2rem;
+                }
+            
+                button {
+                    font-size: 0.9rem;
+                    padding: 0.5rem 1rem;
+                }
+            }
+          </style>
+    </head>
+      
     <body>
-        <button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
-        <br><br>
+        <h1 tpye="h1">Lista de alumnos</h1>
+        <button type="button" onclick="triggerExplosion(event); loadXMLDoc()">Tomar mi lista de alumnos</button>
         <table id="demo"></table>
 
         <script>
@@ -19,23 +134,79 @@
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {
                     const xmlDoc = xhttp.responseXML;
-                    const cd = xmlDoc.getElementsByTagName("CD");
-                    myFunction(cd)
+                    const lista = xmlDoc.getElementsByTagName("ALUMNO");
+                    myFunction(lista)
                 }
-                xhttp.open("GET", "cd_catalog.xml");
+                xhttp.open("GET", "alumnos.xml");
                 xhttp.send();
             }
 
             function myFunction(cd) {
-                let table="<tr><th>Artist</th><th>Title</th></tr>";
-                for (let i = 0; i < cd.length; i++) { 
+                let table="<tr><th>Nombre</th><th>Apellido</th><th>Nacimiento</th><th>Curso</th></tr>";
+                for (let i = 0; i < cd.length; i++) {
                     table += "<tr><td>" +
-                    cd[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+                    cd[i].getElementsByTagName("NOMBRE")[0].childNodes[0].nodeValue +
                     "</td><td>" +
-                    cd[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                    cd[i].getElementsByTagName("APELLIDO")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    cd[i].getElementsByTagName("NACIMIENTO")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    cd[i].getElementsByTagName("CURSO")[0].childNodes[0].nodeValue +
                     "</td></tr>";
                 }
                 document.getElementById("demo").innerHTML = table;
+            }
+
+            function triggerExplosion(event) {
+                const rect = event.target.getBoundingClientRect();
+                const xCenter = rect.left + rect.width / 2;
+                const yCenter = rect.top + rect.height / 2;
+
+                const container = document.createElement('div');
+                container.className = 'explosion';
+                document.body.appendChild(container);
+
+                for (let i = 0; i < 60; i++) {
+                    const circle = document.createElement('div');
+                    circle.className = 'circle';
+
+                    const randX = (Math.random() - 0.5) * 500 + 'px';
+                    const randY = (Math.random() - 0.5) * 500 + 'px';
+                    const size = Math.random() * 10 + 4;
+                    const scale = Math.random() * 2 + 2;
+
+                    circle.style.setProperty('--x', randX);
+                    circle.style.setProperty('--y', randY);
+                    circle.style.setProperty('--scale', scale);
+                    circle.style.left = xCenter + 'px';
+                    circle.style.top = yCenter + 'px';
+                    circle.style.width = size + 'px';
+                    circle.style.height = size + 'px';
+
+                    container.appendChild(circle);
+                }
+
+                for (let i = 0; i < 30; i++) {
+                    const line = document.createElement('div');
+                    line.className = 'line';
+
+                    const randX = (Math.random() - 0.5) * 800 + 'px';
+                    const randY = (Math.random() - 0.5) * 800 + 'px';
+                    const scale = Math.random() * 2 + 2;
+
+                    line.style.setProperty('--x', randX);
+                    line.style.setProperty('--y', randY);
+                    line.style.setProperty('--scale', scale);
+                    line.style.left = xCenter + 'px';
+                    line.style.top = yCenter + 'px';
+                    line.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+                    container.appendChild(line);
+                }
+
+                setTimeout(() => {
+                    container.remove();
+                }, 3000);
             }
         </script>
     </body>

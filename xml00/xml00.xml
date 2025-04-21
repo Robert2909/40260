@@ -14,7 +14,6 @@
 ]>
 
 <alumnos>
-
     <alumno id="a1" edad="15" becado="Si">
         <nombre>Eren</nombre>
         <apellido>Jaeger</apellido>

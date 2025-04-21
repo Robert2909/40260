@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Página 02</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #ffffff;
+                color: #111;
+                margin: 0;
+                padding: 2rem;
+            }
+          
+            h1 {
+                text-align: center;
+                font-size: 2.5rem;
+                color: #000;
+                margin-bottom: 2rem;
+                border-bottom: 2px solid #000;
+                padding-bottom: 0.5rem;
+            }
+          
+            button {
+                background-color: #000;
+                color: #fff;
+                border: 2px solid #000;
+                padding: 0.6rem 1.2rem;
+                font-size: 1rem;
+                cursor: pointer;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+                display: block;
+                margin: 0 auto 2rem auto;
+            }
+          
+            button:hover {
+                background-color: #fff;
+                color: #000;
+                transform: scale(1.05);
+            }
+          
+            table {
+                width: 100%;
+                max-width: 900px;
+                margin: auto;
+                border-collapse: collapse;
+                table-layout: fixed;
+                box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            }
+          
+            th, td {
+                width: 1%;
+                padding: 0.8rem;
+                border: 1px solid #000;
+                text-align: left;
+                transition: background-color 0.2s ease;
+                word-wrap: break-word;
+            }
+          
+            th {
+                text-align: center;
+                background-color: #000;
+                color: #fff;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+          
+            tr:hover td {
+                background-color: #f5f5f5;
+            }
+          
+            @media (max-width: 768px) {
+                table, th, td {
+                    font-size: 0.9rem;
+                }
+            
+                h1 {
+                    font-size: 2rem;
+                }
+            
+                button {
+                    font-size: 0.9rem;
+                    padding: 0.5rem 1rem;
+                }
+            }
+          </style>
+    </head>
+
+    <body>
+
+    <h1>Catálogo de CDs</h1>
+
+    <div class="card">
+        <button onclick="loadXMLDoc()">Encontrar lista de CDS</button>
+        <div id="error"></div>
+        <table id="demo"></table>
+    </div>
+
+    <script>
+        const loadXMLDoc = async () => {
+        try {
+            const response = await fetch('cd_catalog.xml');
+            const text = await response.text();
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(text, "application/xml");
+            const cds = xmlDoc.getElementsByTagName("CD");
+            myFunction(cds);
+            document.getElementById("error").textContent = "";
+        } catch (error) {
+            console.error('Error loading XML:', error);
+            document.getElementById("error").textContent = "No se pudo cargar el archivo XML.";
+        }
+        };
+
+        const myFunction = (cds) => {
+        let table = "<tr><th>Artista</th><th>Título</th></tr>";
+        Array.from(cds).forEach(cd => {
+            const artist = cd.getElementsByTagName("ARTIST")[0]?.textContent || "Desconocido";
+            const title = cd.getElementsByTagName("TITLE")[0]?.textContent || "Sin título";
+            table += `<tr><td>${artist}</td><td>${title}</td></tr>`;
+        });
+        document.getElementById("demo").innerHTML = table;
+        };
+    </script>
+
+    </body>
+</html>

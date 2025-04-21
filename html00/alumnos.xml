@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ALUMNOS>
+  <ALUMNO id="a1" edad="16" becado="Sí">
+      <NOMBRE>Valeria</NOMBRE>
+      <APELLIDO>González</APELLIDO>
+      <NACIMIENTO>12/Enero/2009</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a2" edad="17" becado="No">
+      <NOMBRE>Juan</NOMBRE>
+      <APELLIDO>López</APELLIDO>
+      <NACIMIENTO>23/Marzo/2008</NACIMIENTO>
+      <CURSO>5° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a3" edad="15" becado="Sí">
+      <NOMBRE>Camila</NOMBRE>
+      <APELLIDO>Ramírez</APELLIDO>
+      <NACIMIENTO>07/Julio/2009</NACIMIENTO>
+      <CURSO>3° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a4" edad="16" becado="No">
+      <NOMBRE>Santiago</NOMBRE>
+      <APELLIDO>Martínez</APELLIDO>
+      <NACIMIENTO>15/Mayo/2008</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a5" edad="17" becado="Sí">
+      <NOMBRE>Paola</NOMBRE>
+      <APELLIDO>Hernández</APELLIDO>
+      <NACIMIENTO>19/Noviembre/2007</NACIMIENTO>
+      <CURSO>5° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a6" edad="15" becado="No">
+      <NOMBRE>Emilio</NOMBRE>
+      <APELLIDO>Ruiz</APELLIDO>
+      <NACIMIENTO>30/Agosto/2009</NACIMIENTO>
+      <CURSO>3° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a7" edad="16" becado="Sí">
+      <NOMBRE>Lucía</NOMBRE>
+      <APELLIDO>Mendoza</APELLIDO>
+      <NACIMIENTO>11/Febrero/2009</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a8" edad="15" becado="No">
+      <NOMBRE>Iván</NOMBRE>
+      <APELLIDO>Ortiz</APELLIDO>
+      <NACIMIENTO>04/Diciembre/2009</NACIMIENTO>
+      <CURSO>3° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a9" edad="17" becado="Sí">
+      <NOMBRE>Daniela</NOMBRE>
+      <APELLIDO>Castro</APELLIDO>
+      <NACIMIENTO>06/Abril/2008</NACIMIENTO>
+      <CURSO>5° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a10" edad="16" becado="No">
+      <NOMBRE>Andrés</NOMBRE>
+      <APELLIDO>Flores</APELLIDO>
+      <NACIMIENTO>25/Junio/2008</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a11" edad="15" becado="Sí">
+      <NOMBRE>Sofía</NOMBRE>
+      <APELLIDO>Pérez</APELLIDO>
+      <NACIMIENTO>08/Enero/2010</NACIMIENTO>
+      <CURSO>3° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a12" edad="16" becado="No">
+      <NOMBRE>Diego</NOMBRE>
+      <APELLIDO>Cruz</APELLIDO>
+      <NACIMIENTO>17/Marzo/2009</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a13" edad="17" becado="Sí">
+      <NOMBRE>Renata</NOMBRE>
+      <APELLIDO>Morales</APELLIDO>
+      <NACIMIENTO>21/Julio/2007</NACIMIENTO>
+      <CURSO>5° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a14" edad="16" becado="No">
+      <NOMBRE>Tomás</NOMBRE>
+      <APELLIDO>Salazar</APELLIDO>
+      <NACIMIENTO>02/Septiembre/2008</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a15" edad="15" becado="Sí">
+      <NOMBRE>Fernanda</NOMBRE>
+      <APELLIDO>Silva</APELLIDO>
+      <NACIMIENTO>09/Octubre/2009</NACIMIENTO>
+      <CURSO>3° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a16" edad="17" becado="No">
+      <NOMBRE>Mateo</NOMBRE>
+      <APELLIDO>Navarro</APELLIDO>
+      <NACIMIENTO>14/Noviembre/2007</NACIMIENTO>
+      <CURSO>5° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a17" edad="16" becado="Sí">
+      <NOMBRE>Isabella</NOMBRE>
+      <APELLIDO>Reyes</APELLIDO>
+      <NACIMIENTO>01/Febrero/2009</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a18" edad="15" becado="No">
+      <NOMBRE>Alan</NOMBRE>
+      <APELLIDO>Campos</APELLIDO>
+      <NACIMIENTO>28/Mayo/2009</NACIMIENTO>
+      <CURSO>3° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a19" edad="16" becado="Sí">
+      <NOMBRE>Mariana</NOMBRE>
+      <APELLIDO>Ríos</APELLIDO>
+      <NACIMIENTO>16/Junio/2008</NACIMIENTO>
+      <CURSO>4° de secundaria</CURSO>
+  </ALUMNO>
+
+  <ALUMNO id="a20" edad="17" becado="No">
+      <NOMBRE>Kevin</NOMBRE>
+      <APELLIDO>Vega</APELLIDO>
+      <NACIMIENTO>03/Marzo/2008</NACIMIENTO>
+      <CURSO>5° de secundaria</CURSO>
+  </ALUMNO>
+</ALUMNOS>
