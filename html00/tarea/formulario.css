@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px darkgray;
+}
+
+label {
+    background-color: white;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+input[type="submit"], input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #0050ff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 10px 10px 10px #ccc;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #0020bb;
+}
+
+fieldset {
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 10px #ccc;
+}
